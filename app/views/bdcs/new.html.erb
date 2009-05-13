@@ -1,0 +1,41 @@
+<p>Indicate how much you have experienced each symptom during the past week, including today.  Please answer all 25 items.</p>
+<% if flash[:error] %>
+<div style="color: #F00;">
+<pre>
+<%= h flash[:error] %>
+</pre>
+</div>
+<% end %>
+
+<% @result.resulthash ||= {}
+   form_for :bdc, @result, :url => bdcs_path, :html =>{:id => 'bdc_form'} do |f|%>
+<table border="1" style="border-collapse: collapse;">
+<% Heading.find(:all, :order => "position").each do |head| -%>
+    <tr>
+      <td colspan="6"><h3><%= head.name %></h3></td>
+    </tr>
+    <tr>
+      <th>&nbsp;</th>
+      <th>0-Not At All</th>
+      <th>1-Somewhat</th>
+      <th>2-Moderately</th>
+      <th>3-A lot</th>
+      <th>4-Extremely</th>
+    </tr>
+  <% head.questions.each do |q| -%>
+    <tr>
+      <td><%= q.position %>. <%= q.value %></td>
+      <td><%= f.radio_button "ans"+q.position.to_s, "0", :checked => @result.resulthash["ans"+q.position.to_s] == "0" %><label for="bdc_ans<%= q.position %>_0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+      <td><%= f.radio_button "ans"+q.position.to_s, "1", :checked => @result.resulthash["ans"+q.position.to_s] == "1" %><label for="bdc_ans<%= q.position %>_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+      <td><%= f.radio_button "ans"+q.position.to_s, "2", :checked => @result.resulthash["ans"+q.position.to_s] == "2" %><label for="bdc_ans<%= q.position %>_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+      <td><%= f.radio_button "ans"+q.position.to_s, "3", :checked => @result.resulthash["ans"+q.position.to_s] == "3" %><label for="bdc_ans<%= q.position %>_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+      <td><%= f.radio_button "ans"+q.position.to_s, "4", :checked => @result.resulthash["ans"+q.position.to_s] == "4" %><label for="bdc_ans<%= q.position %>_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+    </tr>
+<%   end
+   end -%>
+  <tbody>
+  </tbody>
+</table>
+<%= f.submit "Save" %>
+<%= button_to_function "Cancel","Form.reset('bdc_form');" %>
+<% end -%>

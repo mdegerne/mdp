@@ -1,0 +1,43 @@
+<% if @results.blank? %>
+<p>You have no test results yet.  Please <%= link_to "fill in a self test.", new_bdc_path %></p>
+<% else %>
+<h2>Current Result</h2>
+<table class="info">
+  <thead>
+    <caption>Result interpretation table:</caption>
+    <tr>
+      <th>Total Score</th>
+      <th>Level of Depression</th>
+    </tr>
+  </thead>
+  <tbody>
+ <% bot = 0
+    Result::INTERPRETATIONS.each do |top,interpretation| %>
+    <tr>
+      <td class="center"> <%= bot %> - <%= top %></td>
+      <td> <%= interpretation %></td>
+    </tr>
+ <%   bot = top + 1
+    end %>
+  </tbody>
+</table>
+<div class="results">
+<p>Your latest test result is:<b> <%= @results.first.total %></b></p>
+<p>That indicates: <%= @results.first.interpret %></p>
+</div>
+
+<h2>Past Results</h2>
+
+<table class="results">
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => "result_row", :collection => @results %>
+  </tbody>
+</table>
+
+<% end %>

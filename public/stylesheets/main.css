@@ -1,0 +1,56 @@
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,blockquote,fieldset,input {
+  font-family: "Lucida Grande", "Lucica Sans Unicode",Arial, Verdana, Tahoma, sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  line-height: 15px;
+}
+body {
+  width: 100%;
+  text-align: center;
+}
+div.container {
+  width: 700px;
+  margin: 10px auto 10px;
+  text-align: left;
+}
+div.header {
+  height: 60px;
+  padding: 10px 80px;
+  background: url(/images/header.jpg) no-repeat scroll 0 0;
+}
+h1 {
+font-size: 18px;
+}
+h2 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  clear: both;
+  font-size: 15px;
+}
+table.info {
+  float: left;
+  background: #888;
+  border: 1px black solid;
+  font-size: 10px;
+}
+td.center {
+  text-align: center;
+}
+div.results {
+  padding-left: 50px;
+  float: left;
+}
+table.results {
+  border: 1px solid #00F;
+}
+table.results td {
+  padding: 0px 10px;
+}
+table.results tr.odd {
+  background: #CCF;
+}
+table.results tr.even {
+  background: #EEF;
+}

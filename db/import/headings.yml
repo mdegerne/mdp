@@ -1,0 +1,20 @@
+tandf:
+  id: 1
+  position: 1
+  name: Thoughts and Feelings
+
+apr:
+  id: 2
+  position: 2
+  name: Activities and Personal Relationships
+
+ps:
+  id: 3
+  position: 3
+  name: Physical Symptoms
+
+st:
+  id: 4
+  position: 4
+  name: Suicidal Thoughts
+

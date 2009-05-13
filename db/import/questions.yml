@@ -1,0 +1,125 @@
+one:
+  position: 1
+  heading_id: 1
+  value: Feeling sad or down in the dumps
+
+two:
+  position: 2
+  heading_id: 1
+  value: Feeling unhappy or blue
+
+three:
+  position: 3
+  heading_id: 1
+  value: Crying spells or tearfulness
+
+four:
+  position: 4
+  heading_id: 1
+  value: Feeling discouraged
+
+five:
+  position: 5
+  heading_id: 1
+  value: Feeling hopeless
+
+six:
+  position: 6
+  heading_id: 1
+  value: Low self-esteem
+
+seven:
+  position: 7
+  heading_id: 1
+  value: Feeling worthless or inadequate
+
+eight:
+  position: 8
+  heading_id: 1
+  value: Guilt or Shame
+
+nine:
+  position: 9
+  heading_id: 1
+  value: Criticizing yourself or blaming yourself
+
+ten:
+  position: 10
+  heading_id: 1
+  value: Difficulty making decisions
+
+elev:
+  position: 11
+  heading_id: 2
+  value: Loss of interest in family, friends, or colleagues
+
+twelve:
+  position: 12
+  heading_id: 2
+  value: Loneliness
+
+thirteen:
+  position: 13
+  heading_id: 2
+  value: Spending less time with family or friends
+
+fourteen:
+  position: 14
+  heading_id: 2
+  value: Loss of motivation
+
+fifteen:
+  position: 15
+  heading_id: 2
+  value: Loss of interest in work or other activities
+
+sixteen:
+  position: 16
+  heading_id: 2
+  value: Avoiding work or other activities
+
+seventeen:
+  position: 17
+  heading_id: 2
+  value: Loss of pleasure or satisfaction in life
+
+eightteen:
+  position: 18
+  heading_id: 3
+  value: Feeling tired
+
+nineteen:
+  position: 19
+  heading_id: 3
+  value: Difficulty sleeping or sleeping too much
+
+twenty:
+  position: 20
+  heading_id: 3
+  value: Decreased or increased appetite
+
+twone:
+  position: 21
+  heading_id: 3
+  value: Loss of interest in sex
+
+twtwo:
+  position: 22
+  heading_id: 3
+  value: Worrying about your health
+
+twthree:
+  position: 23
+  heading_id: 4
+  value: Do you have any suicidal thoughts?
+
+twfour:
+  position: 24
+  heading_id: 4
+  value: Would you like to end your life?
+
+twfive:
+  position: 25
+  heading_id: 4
+  value: Do you have a plan for harming yourself?
+
